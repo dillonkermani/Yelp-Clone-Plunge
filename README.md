@@ -34,4 +34,4 @@ Happy plunging into the world of amazing images! 📸🌟
 
 ---
 
-**Note:** This README provides a general overview of the Plunge THA app and how to use it. For more detailed installation instructions, troubleshooting, and information about the underlying code, please refer to the documentation and source code available in the GitHub repository.
+**Note:** This app is currently running on a free Unsplash API key and is limited to 50 calls per day.
