@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65299E782A8484E80022FE37 /* Yelp_Clone__Plunge_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299E772A8484E80022FE37 /* Yelp_Clone__Plunge_App.swift */; };
+		65299E7A2A8484E80022FE37 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299E792A8484E80022FE37 /* ContentView.swift */; };
+		65299E7C2A8484EA0022FE37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65299E7B2A8484EA0022FE37 /* Assets.xcassets */; };
+		65299E802A8484EA0022FE37 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65299E7F2A8484EA0022FE37 /* Preview Assets.xcassets */; };
+		65299E8A2A8484EA0022FE37 /* Yelp_Clone__Plunge_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299E892A8484EA0022FE37 /* Yelp_Clone__Plunge_Tests.swift */; };
+		65299E942A8484EB0022FE37 /* Yelp_Clone__Plunge_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299E932A8484EB0022FE37 /* Yelp_Clone__Plunge_UITests.swift */; };
+		65299E962A8484EB0022FE37 /* Yelp_Clone__Plunge_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299E952A8484EB0022FE37 /* Yelp_Clone__Plunge_UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65299E862A8484EA0022FE37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65299E6C2A8484E80022FE37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65299E732A8484E80022FE37;
+			remoteInfo = "Yelp Clone (Plunge)";
+		};
+		65299E902A8484EB0022FE37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65299E6C2A8484E80022FE37 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65299E732A8484E80022FE37;
+			remoteInfo = "Yelp Clone (Plunge)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		65299E742A8484E80022FE37 /* Yelp Clone (Plunge).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yelp Clone (Plunge).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65299E772A8484E80022FE37 /* Yelp_Clone__Plunge_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yelp_Clone__Plunge_App.swift; sourceTree = "<group>"; };
+		65299E792A8484E80022FE37 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		65299E7B2A8484EA0022FE37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65299E7D2A8484EA0022FE37 /* Yelp_Clone__Plunge_.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Yelp_Clone__Plunge_.entitlements; sourceTree = "<group>"; };
+		65299E7F2A8484EA0022FE37 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		65299E852A8484EA0022FE37 /* Yelp Clone (Plunge)Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yelp Clone (Plunge)Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65299E892A8484EA0022FE37 /* Yelp_Clone__Plunge_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yelp_Clone__Plunge_Tests.swift; sourceTree = "<group>"; };
+		65299E8F2A8484EB0022FE37 /* Yelp Clone (Plunge)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yelp Clone (Plunge)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65299E932A8484EB0022FE37 /* Yelp_Clone__Plunge_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yelp_Clone__Plunge_UITests.swift; sourceTree = "<group>"; };
+		65299E952A8484EB0022FE37 /* Yelp_Clone__Plunge_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yelp_Clone__Plunge_UITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65299E712A8484E80022FE37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65299E822A8484EA0022FE37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65299E8C2A8484EB0022FE37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65299E6B2A8484E80022FE37 = {
+			isa = PBXGroup;
+			children = (
+				65299E762A8484E80022FE37 /* Yelp Clone (Plunge) */,
+				65299E882A8484EA0022FE37 /* Yelp Clone (Plunge)Tests */,
+				65299E922A8484EB0022FE37 /* Yelp Clone (Plunge)UITests */,
+				65299E752A8484E80022FE37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65299E752A8484E80022FE37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65299E742A8484E80022FE37 /* Yelp Clone (Plunge).app */,
+				65299E852A8484EA0022FE37 /* Yelp Clone (Plunge)Tests.xctest */,
+				65299E8F2A8484EB0022FE37 /* Yelp Clone (Plunge)UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65299E762A8484E80022FE37 /* Yelp Clone (Plunge) */ = {
+			isa = PBXGroup;
+			children = (
+				65299E772A8484E80022FE37 /* Yelp_Clone__Plunge_App.swift */,
+				65299E792A8484E80022FE37 /* ContentView.swift */,
+				65299E7B2A8484EA0022FE37 /* Assets.xcassets */,
+				65299E7D2A8484EA0022FE37 /* Yelp_Clone__Plunge_.entitlements */,
+				65299E7E2A8484EA0022FE37 /* Preview Content */,
+			);
+			path = "Yelp Clone (Plunge)";
+			sourceTree = "<group>";
+		};
+		65299E7E2A8484EA0022FE37 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				65299E7F2A8484EA0022FE37 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		65299E882A8484EA0022FE37 /* Yelp Clone (Plunge)Tests */ = {
+			isa = PBXGroup;
+			children = (
+				65299E892A8484EA0022FE37 /* Yelp_Clone__Plunge_Tests.swift */,
+			);
+			path = "Yelp Clone (Plunge)Tests";
+			sourceTree = "<group>";
+		};
+		65299E922A8484EB0022FE37 /* Yelp Clone (Plunge)UITests */ = {
+			isa = PBXGroup;
+			children = (
+				65299E932A8484EB0022FE37 /* Yelp_Clone__Plunge_UITests.swift */,
+				65299E952A8484EB0022FE37 /* Yelp_Clone__Plunge_UITestsLaunchTests.swift */,
+			);
+			path = "Yelp Clone (Plunge)UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65299E732A8484E80022FE37 /* Yelp Clone (Plunge) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65299E992A8484EB0022FE37 /* Build configuration list for PBXNativeTarget "Yelp Clone (Plunge)" */;
+			buildPhases = (
+				65299E702A8484E80022FE37 /* Sources */,
+				65299E712A8484E80022FE37 /* Frameworks */,
+				65299E722A8484E80022FE37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Yelp Clone (Plunge)";
+			productName = "Yelp Clone (Plunge)";
+			productReference = 65299E742A8484E80022FE37 /* Yelp Clone (Plunge).app */;
+			productType = "com.apple.product-type.application";
+		};
+		65299E842A8484EA0022FE37 /* Yelp Clone (Plunge)Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65299E9C2A8484EB0022FE37 /* Build configuration list for PBXNativeTarget "Yelp Clone (Plunge)Tests" */;
+			buildPhases = (
+				65299E812A8484EA0022FE37 /* Sources */,
+				65299E822A8484EA0022FE37 /* Frameworks */,
+				65299E832A8484EA0022FE37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65299E872A8484EA0022FE37 /* PBXTargetDependency */,
+			);
+			name = "Yelp Clone (Plunge)Tests";
+			productName = "Yelp Clone (Plunge)Tests";
+			productReference = 65299E852A8484EA0022FE37 /* Yelp Clone (Plunge)Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		65299E8E2A8484EB0022FE37 /* Yelp Clone (Plunge)UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65299E9F2A8484EB0022FE37 /* Build configuration list for PBXNativeTarget "Yelp Clone (Plunge)UITests" */;
+			buildPhases = (
+				65299E8B2A8484EB0022FE37 /* Sources */,
+				65299E8C2A8484EB0022FE37 /* Frameworks */,
+				65299E8D2A8484EB0022FE37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65299E912A8484EB0022FE37 /* PBXTargetDependency */,
+			);
+			name = "Yelp Clone (Plunge)UITests";
+			productName = "Yelp Clone (Plunge)UITests";
+			productReference = 65299E8F2A8484EB0022FE37 /* Yelp Clone (Plunge)UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65299E6C2A8484E80022FE37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					65299E732A8484E80022FE37 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					65299E842A8484EA0022FE37 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 65299E732A8484E80022FE37;
+					};
+					65299E8E2A8484EB0022FE37 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 65299E732A8484E80022FE37;
+					};
+				};
+			};
+			buildConfigurationList = 65299E6F2A8484E80022FE37 /* Build configuration list for PBXProject "Yelp Clone (Plunge)" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65299E6B2A8484E80022FE37;
+			productRefGroup = 65299E752A8484E80022FE37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65299E732A8484E80022FE37 /* Yelp Clone (Plunge) */,
+				65299E842A8484EA0022FE37 /* Yelp Clone (Plunge)Tests */,
+				65299E8E2A8484EB0022FE37 /* Yelp Clone (Plunge)UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65299E722A8484E80022FE37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65299E802A8484EA0022FE37 /* Preview Assets.xcassets in Resources */,
+				65299E7C2A8484EA0022FE37 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65299E832A8484EA0022FE37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65299E8D2A8484EB0022FE37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65299E702A8484E80022FE37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65299E7A2A8484E80022FE37 /* ContentView.swift in Sources */,
+				65299E782A8484E80022FE37 /* Yelp_Clone__Plunge_App.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65299E812A8484EA0022FE37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65299E8A2A8484EA0022FE37 /* Yelp_Clone__Plunge_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65299E8B2A8484EB0022FE37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65299E942A8484EB0022FE37 /* Yelp_Clone__Plunge_UITests.swift in Sources */,
+				65299E962A8484EB0022FE37 /* Yelp_Clone__Plunge_UITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65299E872A8484EA0022FE37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65299E732A8484E80022FE37 /* Yelp Clone (Plunge) */;
+			targetProxy = 65299E862A8484EA0022FE37 /* PBXContainerItemProxy */;
+		};
+		65299E912A8484EB0022FE37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65299E732A8484E80022FE37 /* Yelp Clone (Plunge) */;
+			targetProxy = 65299E902A8484EB0022FE37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		65299E972A8484EB0022FE37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		65299E982A8484EB0022FE37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		65299E9A2A8484EB0022FE37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Yelp Clone (Plunge)/Yelp_Clone__Plunge_.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Yelp Clone (Plunge)/Preview Content\"";
+				DEVELOPMENT_TEAM = GYVU2SNZW9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yelpclone.Yelp-Clone--Plunge-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65299E9B2A8484EB0022FE37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Yelp Clone (Plunge)/Yelp_Clone__Plunge_.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Yelp Clone (Plunge)/Preview Content\"";
+				DEVELOPMENT_TEAM = GYVU2SNZW9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yelpclone.Yelp-Clone--Plunge-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		65299E9D2A8484EB0022FE37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYVU2SNZW9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yelpclone.Yelp-Clone--Plunge-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yelp Clone (Plunge).app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yelp Clone (Plunge)";
+			};
+			name = Debug;
+		};
+		65299E9E2A8484EB0022FE37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYVU2SNZW9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yelpclone.Yelp-Clone--Plunge-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yelp Clone (Plunge).app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yelp Clone (Plunge)";
+			};
+			name = Release;
+		};
+		65299EA02A8484EB0022FE37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYVU2SNZW9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yelpclone.Yelp-Clone--Plunge-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Yelp Clone (Plunge)";
+			};
+			name = Debug;
+		};
+		65299EA12A8484EB0022FE37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GYVU2SNZW9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yelpclone.Yelp-Clone--Plunge-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Yelp Clone (Plunge)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65299E6F2A8484E80022FE37 /* Build configuration list for PBXProject "Yelp Clone (Plunge)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65299E972A8484EB0022FE37 /* Debug */,
+				65299E982A8484EB0022FE37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65299E992A8484EB0022FE37 /* Build configuration list for PBXNativeTarget "Yelp Clone (Plunge)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65299E9A2A8484EB0022FE37 /* Debug */,
+				65299E9B2A8484EB0022FE37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65299E9C2A8484EB0022FE37 /* Build configuration list for PBXNativeTarget "Yelp Clone (Plunge)Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65299E9D2A8484EB0022FE37 /* Debug */,
+				65299E9E2A8484EB0022FE37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65299E9F2A8484EB0022FE37 /* Build configuration list for PBXNativeTarget "Yelp Clone (Plunge)UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65299EA02A8484EB0022FE37 /* Debug */,
+				65299EA12A8484EB0022FE37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65299E6C2A8484E80022FE37 /* Project object */;
+}
