@@ -25,7 +25,7 @@ Plunge THA is a simple and user-friendly app that lets you search for pictures f
 
 ## Feedback and Contributions
 
-We welcome your feedback and contributions to make Plunge THA even better! If you encounter any issues or have suggestions for new features, please [open an issue](https://github.com/your-username/plunge-tha/issues) on the GitHub repository.
+We welcome your feedback and contributions to make Plunge THA even better! If you encounter any issues or have suggestions for new features, please [open an issue](https://github.com/dillonkermani/Yelp-Clone-Plunge-/issues) on the GitHub repository.
 
 Happy plunging into the world of amazing images! 📸🌟
 
