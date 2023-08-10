@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct SearchView: View {
+    
+    @ObservedObject var sharedVM = SharedViewModel()
+    
+    let images = ["vector1", "vector2", "vector3", "vector4"]
+        
     var body: some View {
-        
-        let images = ["vector1", "vector2", "vector3", "vector4"]
-        
-        @State var searchText = ""
-                
         ZStack {
             ScrollView {
                 ZStack {
@@ -57,13 +57,57 @@ struct SearchView: View {
                     }.padding(.top, 65)
                     
                     VStack {
-                        SearchBar(text: searchText)
+                        SearchBar(text: $sharedVM.searchText)
                             .offset(y: -30)
+                            .onSubmit {
+                                sharedVM.loadImages()
+                            }
+                    
+                        ImagesList()
+                        
                     }
                     .padding(.top, 55 + SCREEN_HEIGHT/3.5)
-                    
                 }
             }
+        }
+    }
+    
+    func ImagesList() -> some View {
+        ScrollView(.horizontal) {
+            HStack(spacing: 15) {
+                if sharedVM.isLoading {
+                    
+                } else {
+                    ForEach(sharedVM.results, id: \.id, content: { result in
+                        ImageCard(url: result.urls.small)
+                    })
+                }
+            }.onAppear {
+                sharedVM.loadImages()
+            }
+            .padding(15)
+    
+        }
+    }
+    
+    func ImageCard(url: String) -> some View {
+        ZStack {
+            AsyncImage(url: URL(string: url)) { phase in
+                switch phase {
+                case .success(let image):
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                case .failure(_):
+                    Color.red // Placeholder color for error case
+                case .empty:
+                    ProgressView()
+                @unknown default:
+                    fatalError()
+                }
+            }
+            .frame(width: 150, height: 250) // Adjust the size as needed
+            .cornerRadius(15)
         }
     }
 }

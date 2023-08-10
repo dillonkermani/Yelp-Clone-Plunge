@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchBar: View {
-    @State var text = ""
+    @Binding var text: String
         var body: some View {
             ZStack {
                 Color.background.ignoresSafeArea()
@@ -23,12 +23,6 @@ struct SearchBar: View {
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
             }
         }
-}
-
-struct SearchBar_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchBar()
-    }
 }
 
 struct NeumorphicStyleTextField: View {
