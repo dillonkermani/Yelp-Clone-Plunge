@@ -24,8 +24,15 @@
 		65299EB72A848BC00022FE37 /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EB62A848BC00022FE37 /* TabPosition.swift */; };
 		65299EB92A848C470022FE37 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EB82A848C470022FE37 /* Tab.swift */; };
 		65299EBB2A848DB60022FE37 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EBA2A848DB60022FE37 /* TabItem.swift */; };
-		65299EBD2A8492560022FE37 /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EBC2A8492560022FE37 /* SnapCarousel.swift */; };
 		65299EBF2A8496940022FE37 /* UIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EBE2A8496940022FE37 /* UIState.swift */; };
+		65299EC12A84A3EC0022FE37 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC02A84A3EC0022FE37 /* SliderView.swift */; };
+		65299EC32A84A55F0022FE37 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC22A84A55F0022FE37 /* ImageCarouselView.swift */; };
+		65299EC52A84A91A0022FE37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC42A84A91A0022FE37 /* Constants.swift */; };
+		65299EC72A84ACEF0022FE37 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC62A84ACEF0022FE37 /* SearchBar.swift */; };
+		659132A32A85652600F6CA5E /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A22A85652600F6CA5E /* UnsplashAPI.swift */; };
+		659132A52A85658A00F6CA5E /* SharedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A42A85658A00F6CA5E /* SharedViewModel.swift */; };
+		659132A72A856A1900F6CA5E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A62A856A1900F6CA5E /* Result.swift */; };
+		659132A92A857E1F00F6CA5E /* ImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A82A857E1F00F6CA5E /* ImageCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +74,15 @@
 		65299EB62A848BC00022FE37 /* TabPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
 		65299EB82A848C470022FE37 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		65299EBA2A848DB60022FE37 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
-		65299EBC2A8492560022FE37 /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
 		65299EBE2A8496940022FE37 /* UIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIState.swift; sourceTree = "<group>"; };
+		65299EC02A84A3EC0022FE37 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		65299EC22A84A55F0022FE37 /* ImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
+		65299EC42A84A91A0022FE37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		65299EC62A84ACEF0022FE37 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		659132A22A85652600F6CA5E /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
+		659132A42A85658A00F6CA5E /* SharedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewModel.swift; sourceTree = "<group>"; };
+		659132A62A856A1900F6CA5E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		659132A82A857E1F00F6CA5E /* ImageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +136,7 @@
 				65299E772A8484E80022FE37 /* Yelp_Clone__Plunge_App.swift */,
 				65299EA72A848AC80022FE37 /* Views */,
 				65299EA62A848AAB0022FE37 /* ViewModel */,
+				659132A12A85651600F6CA5E /* API */,
 				65299EA52A848AA10022FE37 /* Model */,
 				65299E7B2A8484EA0022FE37 /* Assets.xcassets */,
 				65299E7D2A8484EA0022FE37 /* Yelp_Clone__Plunge_.entitlements */,
@@ -172,6 +187,8 @@
 			children = (
 				65299EB82A848C470022FE37 /* Tab.swift */,
 				65299EBE2A8496940022FE37 /* UIState.swift */,
+				65299EC42A84A91A0022FE37 /* Constants.swift */,
+				659132A62A856A1900F6CA5E /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,6 +196,7 @@
 		65299EA62A848AAB0022FE37 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				659132A42A85658A00F6CA5E /* SharedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,7 +217,10 @@
 				65299EB42A848BB70022FE37 /* TabShape.swift */,
 				65299EB62A848BC00022FE37 /* TabPosition.swift */,
 				65299EBA2A848DB60022FE37 /* TabItem.swift */,
-				65299EBC2A8492560022FE37 /* SnapCarousel.swift */,
+				65299EC02A84A3EC0022FE37 /* SliderView.swift */,
+				65299EC22A84A55F0022FE37 /* ImageCarouselView.swift */,
+				65299EC62A84ACEF0022FE37 /* SearchBar.swift */,
+				659132A82A857E1F00F6CA5E /* ImageCard.swift */,
 			);
 			path = Accessory;
 			sourceTree = "<group>";
@@ -211,6 +232,14 @@
 				65299EA32A8489B60022FE37 /* CustomTabView.swift */,
 			);
 			path = Initial;
+			sourceTree = "<group>";
+		};
+		659132A12A85651600F6CA5E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				659132A22A85652600F6CA5E /* UnsplashAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,17 +375,24 @@
 				65299EAF2A848B8C0022FE37 /* MeView.swift in Sources */,
 				65299EB12A848B9C0022FE37 /* CollectionsView.swift in Sources */,
 				65299EBB2A848DB60022FE37 /* TabItem.swift in Sources */,
+				65299EC32A84A55F0022FE37 /* ImageCarouselView.swift in Sources */,
 				65299EAD2A848B850022FE37 /* ProjectsView.swift in Sources */,
-				65299EBD2A8492560022FE37 /* SnapCarousel.swift in Sources */,
 				65299EBF2A8496940022FE37 /* UIState.swift in Sources */,
+				659132A72A856A1900F6CA5E /* Result.swift in Sources */,
 				65299EB52A848BB70022FE37 /* TabShape.swift in Sources */,
+				65299EC52A84A91A0022FE37 /* Constants.swift in Sources */,
 				65299EB72A848BC00022FE37 /* TabPosition.swift in Sources */,
 				65299EB92A848C470022FE37 /* Tab.swift in Sources */,
+				659132A32A85652600F6CA5E /* UnsplashAPI.swift in Sources */,
 				65299EAB2A848B680022FE37 /* SearchView.swift in Sources */,
+				659132A92A857E1F00F6CA5E /* ImageCard.swift in Sources */,
 				65299E7A2A8484E80022FE37 /* ContentView.swift in Sources */,
+				659132A52A85658A00F6CA5E /* SharedViewModel.swift in Sources */,
 				65299EA42A8489B60022FE37 /* CustomTabView.swift in Sources */,
 				65299E782A8484E80022FE37 /* Yelp_Clone__Plunge_App.swift in Sources */,
 				65299EB32A848BA40022FE37 /* MoreView.swift in Sources */,
+				65299EC72A84ACEF0022FE37 /* SearchBar.swift in Sources */,
+				65299EC12A84A3EC0022FE37 /* SliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

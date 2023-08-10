@@ -16,12 +16,13 @@ struct CustomTabView: View {
     init() {
         UITabBar.appearance().isHidden = true
     }
+    @ObservedObject var sharedVM = SharedViewModel()
     
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $activeTab) {
 
-                SearchView()
+                SearchView(sharedVM: sharedVM)
                     .tag(Tab.search)
                 
                 ProjectsView()
@@ -43,7 +44,7 @@ struct CustomTabView: View {
     }
     
     @ViewBuilder
-    func CustomTabBar(_ tint: Color = Color("YelpRed"), _ inactiveTint: Color = .gray) -> some View {
+    func CustomTabBar(_ tint: Color = Color("PlungeBlack"), _ inactiveTint: Color = .gray) -> some View {
         /// Moving all the Remaining Tab Item's to Bottom
         HStack(alignment: .bottom, spacing: 0) {
             ForEach(Tab.allCases, id: \.rawValue) {
