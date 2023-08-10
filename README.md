@@ -12,7 +12,7 @@ Plunge THA is a simple and user-friendly app that lets you search for pictures f
 
 1. **Search for Pictures:**
 
-  [img]https://i.imgur.com/E4ubdJU.png[/img]
+  [Imgur](https://imgur.com/E4ubdJU)
    
    - Open the Plunge THA app on your device.
    - In the search bar at the top, enter keywords or phrases that describe the type of image you're looking for.
