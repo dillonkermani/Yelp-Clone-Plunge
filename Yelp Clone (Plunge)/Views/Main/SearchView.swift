@@ -13,8 +13,7 @@ struct SearchView: View {
         @ObservedObject var UIState = UIStateModel()
         
         VStack {
-            SnapCarousel(UIState: UIState)
-            Spacer()
+            
         }
     }
 }
