@@ -16,7 +16,7 @@ struct SearchBar: View {
                     HStack {
                         NeumorphicStyleTextField(textField: TextField("Search...", text: $text), imageName: "magnifyingglass")
                     }
-                }.padding()
+                }.padding(.top)
                     .padding(.horizontal, 15)
             }.onTapGesture {
                 // Dismiss the keyboard when tapped outside the TextField

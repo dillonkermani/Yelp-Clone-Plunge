@@ -15,7 +15,7 @@ struct SearchView: View {
         
     var body: some View {
         ZStack {
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 ZStack {
                     VStack {
                         Group {
@@ -62,6 +62,16 @@ struct SearchView: View {
                             .onSubmit {
                                 sharedVM.loadImages()
                             }
+                        
+                        Divider()
+                        
+                        HStack {
+                            Text("Recommended for you")
+                            Spacer()
+                        }
+                        .padding(.leading, 15)
+                        .font(.custom("Futura-Bold", size: 20))
+                        .foregroundColor(Color("PlungeBlack"))
                     
                         ImagesList()
                         
@@ -73,7 +83,7 @@ struct SearchView: View {
     }
     
     func ImagesList() -> some View {
-        ScrollView(.horizontal) {
+        ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 15) {
                 if sharedVM.isLoading {
                     
@@ -87,7 +97,7 @@ struct SearchView: View {
             }
             .padding(15)
     
-        }
+        }.statusBarHidden()
     }
     
     func ImageCard(url: String) -> some View {
