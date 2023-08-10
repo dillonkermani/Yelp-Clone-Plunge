@@ -10,10 +10,33 @@ import SwiftUI
 struct SearchView: View {
     var body: some View {
         
-        @ObservedObject var UIState = UIStateModel()
-        
+        let images = ["vector1", "vector2", "vector3", "vector4"]
+                
         VStack {
             
+            GeometryReader { geometry in
+                ImageCarouselView(numberOfImages: 4) {
+                    ForEach(0..<4) { i in
+                        Image("\(images[i])")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: geometry.size.width, height: geometry.size.height)
+                            .clipped()
+                    }
+                }.clipped()
+            }.frame(width: SCREEN_WIDTH, height: SCREEN_HEIGHT/3.5)
+            
+            ScrollView {
+                VStack {
+                    Rectangle()
+                        .foregroundColor(.gray)
+                        .frame(width: SCREEN_WIDTH, height: SCREEN_HEIGHT)
+                }
+            }
+            
+            
+            
+            Spacer()
         }
     }
 }

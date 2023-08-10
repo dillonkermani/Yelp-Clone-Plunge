@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct ProjectsView: View {
+    
+    let images = ["vector1", "vector2", "vector3", "vector4"]
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TabView{
+                ForEach(0..<4) { i in
+                    Image("\(images[i])")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 800)
+                }
+            }.tabViewStyle(PageTabViewStyle())
+            //.ignoresSafeArea()
+        }
     }
 }
 
