@@ -20,19 +20,20 @@ struct CustomTabView: View {
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $activeTab) {
-                Text("Search")
+
+                SearchView()
                     .tag(Tab.search)
                 
-                Text("Projects")
+                ProjectsView()
                     .tag(Tab.projects)
                 
-                Text("Me")
+                MeView()
                     .tag(Tab.me)
                 
-                Text("Collections")
+                CollectionsView()
                     .tag(Tab.collections)
                 
-                Text("More")
+                MoreView()
                     .tag(Tab.more)
                 
             }
@@ -64,7 +65,7 @@ struct CustomTabView: View {
                 .ignoresSafeArea()
                 /// Adding Blur + Shadow
                 /// For Shape Smoothening
-                .shadow(color: tint.opacity(0.2), radius: 5, x: 0, y: -5)
+                .shadow(color: Color.gray.opacity(0.2), radius: 5, x: 0, y: -5)
                 .blur(radius: 2)
                 .padding(.top, 25)
         })

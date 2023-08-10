@@ -24,6 +24,8 @@
 		65299EB72A848BC00022FE37 /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EB62A848BC00022FE37 /* TabPosition.swift */; };
 		65299EB92A848C470022FE37 /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EB82A848C470022FE37 /* Tab.swift */; };
 		65299EBB2A848DB60022FE37 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EBA2A848DB60022FE37 /* TabItem.swift */; };
+		65299EBD2A8492560022FE37 /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EBC2A8492560022FE37 /* SnapCarousel.swift */; };
+		65299EBF2A8496940022FE37 /* UIState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EBE2A8496940022FE37 /* UIState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		65299EB62A848BC00022FE37 /* TabPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
 		65299EB82A848C470022FE37 /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		65299EBA2A848DB60022FE37 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		65299EBC2A8492560022FE37 /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
+		65299EBE2A8496940022FE37 /* UIState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				65299EB82A848C470022FE37 /* Tab.swift */,
+				65299EBE2A8496940022FE37 /* UIState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				65299EB42A848BB70022FE37 /* TabShape.swift */,
 				65299EB62A848BC00022FE37 /* TabPosition.swift */,
 				65299EBA2A848DB60022FE37 /* TabItem.swift */,
+				65299EBC2A8492560022FE37 /* SnapCarousel.swift */,
 			);
 			path = Accessory;
 			sourceTree = "<group>";
@@ -341,6 +347,8 @@
 				65299EB12A848B9C0022FE37 /* CollectionsView.swift in Sources */,
 				65299EBB2A848DB60022FE37 /* TabItem.swift in Sources */,
 				65299EAD2A848B850022FE37 /* ProjectsView.swift in Sources */,
+				65299EBD2A8492560022FE37 /* SnapCarousel.swift in Sources */,
+				65299EBF2A8496940022FE37 /* UIState.swift in Sources */,
 				65299EB52A848BB70022FE37 /* TabShape.swift in Sources */,
 				65299EB72A848BC00022FE37 /* TabPosition.swift in Sources */,
 				65299EB92A848C470022FE37 /* Tab.swift in Sources */,
