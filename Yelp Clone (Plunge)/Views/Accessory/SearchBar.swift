@@ -17,6 +17,7 @@ struct SearchBar: View {
                         NeumorphicStyleTextField(textField: TextField("Search...", text: $text), imageName: "magnifyingglass")
                     }
                 }.padding()
+                    .padding(.horizontal, 15)
             }.onTapGesture {
                 // Dismiss the keyboard when tapped outside the TextField
                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)

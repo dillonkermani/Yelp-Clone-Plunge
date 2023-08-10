@@ -32,11 +32,13 @@ struct SearchView: View {
                         }
                         .padding(.leading, 25)
                         .font(.custom("Futura-Bold", size: 27))
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("PlungeBlack"))
 
                         
                         Spacer()
                     }
+                   
+                    
                     VStack {
                         GeometryReader { geometry in
                             ImageCarouselView(numberOfImages: 4) {
@@ -50,10 +52,15 @@ struct SearchView: View {
                             }.clipped()
                         }.frame(width: SCREEN_WIDTH, height: SCREEN_HEIGHT/3.5)
                         
-                        SearchBar(text: searchText)
-                            .offset(y: -45)
+                        Spacer()
                         
-                    }.padding(.top, 45)
+                    }.padding(.top, 55)
+                    
+                    VStack {
+                        SearchBar(text: searchText)
+                            .offset(y: -30)
+                    }
+                    .padding(.top, 45 + SCREEN_HEIGHT/3.5)
                     
                 }
             }

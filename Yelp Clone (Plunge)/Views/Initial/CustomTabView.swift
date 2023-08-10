@@ -43,7 +43,7 @@ struct CustomTabView: View {
     }
     
     @ViewBuilder
-    func CustomTabBar(_ tint: Color = Color("YelpRed"), _ inactiveTint: Color = .gray) -> some View {
+    func CustomTabBar(_ tint: Color = Color("PlungeBlack"), _ inactiveTint: Color = .gray) -> some View {
         /// Moving all the Remaining Tab Item's to Bottom
         HStack(alignment: .bottom, spacing: 0) {
             ForEach(Tab.allCases, id: \.rawValue) {
