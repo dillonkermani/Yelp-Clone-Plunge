@@ -28,6 +28,7 @@
 		65299EC12A84A3EC0022FE37 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC02A84A3EC0022FE37 /* SliderView.swift */; };
 		65299EC32A84A55F0022FE37 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC22A84A55F0022FE37 /* ImageCarouselView.swift */; };
 		65299EC52A84A91A0022FE37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC42A84A91A0022FE37 /* Constants.swift */; };
+		65299EC72A84ACEF0022FE37 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC62A84ACEF0022FE37 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		65299EC02A84A3EC0022FE37 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		65299EC22A84A55F0022FE37 /* ImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
 		65299EC42A84A91A0022FE37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		65299EC62A84ACEF0022FE37 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 				65299EBA2A848DB60022FE37 /* TabItem.swift */,
 				65299EC02A84A3EC0022FE37 /* SliderView.swift */,
 				65299EC22A84A55F0022FE37 /* ImageCarouselView.swift */,
+				65299EC62A84ACEF0022FE37 /* SearchBar.swift */,
 			);
 			path = Accessory;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				65299EA42A8489B60022FE37 /* CustomTabView.swift in Sources */,
 				65299E782A8484E80022FE37 /* Yelp_Clone__Plunge_App.swift in Sources */,
 				65299EB32A848BA40022FE37 /* MoreView.swift in Sources */,
+				65299EC72A84ACEF0022FE37 /* SearchBar.swift in Sources */,
 				65299EC12A84A3EC0022FE37 /* SliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
