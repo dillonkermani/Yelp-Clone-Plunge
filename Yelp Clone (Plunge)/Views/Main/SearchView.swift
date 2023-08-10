@@ -16,20 +16,44 @@ struct SearchView: View {
                 
         ZStack {
             ScrollView {
-                VStack {
-                    GeometryReader { geometry in
-                        ImageCarouselView(numberOfImages: 4) {
-                            ForEach(0..<4) { i in
-                                Image("\(images[i])")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: geometry.size.width, height: geometry.size.height)
-                                    .clipped()
+                ZStack {
+                    VStack {
+                        Group {
+
+                            HStack {
+                                Text("Take the Plunge.")
+                                Spacer()
                             }
-                        }.clipped()
-                    }.frame(width: SCREEN_WIDTH, height: SCREEN_HEIGHT/3.5)
-                    
-                    SearchBar(text: searchText)
+                            HStack {
+                                Text("Change your life.")
+                                Spacer()
+                            }
+                            .padding(.leading, 25)
+                        }
+                        .padding(.leading, 25)
+                        .font(.custom("Futura-Bold", size: 27))
+                        .foregroundColor(.black)
+
+                        
+                        Spacer()
+                    }
+                    VStack {
+                        GeometryReader { geometry in
+                            ImageCarouselView(numberOfImages: 4) {
+                                ForEach(0..<4) { i in
+                                    Image("\(images[i])")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: geometry.size.width, height: geometry.size.height)
+                                        .clipped()
+                                }
+                            }.clipped()
+                        }.frame(width: SCREEN_WIDTH, height: SCREEN_HEIGHT/3.5)
+                        
+                        SearchBar(text: searchText)
+                            .offset(y: -45)
+                        
+                    }.padding(.top, 45)
                     
                 }
             }
