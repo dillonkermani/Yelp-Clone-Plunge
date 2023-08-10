@@ -16,7 +16,7 @@ Plunge THA is a simple and user-friendly app that lets you search for pictures f
    
    - Open the Plunge THA app on your device.
    - In the search bar at the top, enter keywords or phrases that describe the type of image you're looking for.
-   - Tap the "Search" button to retrieve a list of relevant images.
+   - Tap the "Return" or "Enter" button to retrieve a list of relevant images.
 
 3. **Share an Image:**
    - Once you've found the image you want to share, tap on it to bring up the image details.
