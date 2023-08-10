@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SearchView: View {
     
-    @ObservedObject var sharedVM = SharedViewModel()
+    @StateObject var sharedVM: SharedViewModel
     
     let images = ["vector1", "vector2", "vector3", "vector4"]
         
@@ -109,11 +109,5 @@ struct SearchView: View {
             .frame(width: 150, height: 250) // Adjust the size as needed
             .cornerRadius(15)
         }
-    }
-}
-
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView()
     }
 }

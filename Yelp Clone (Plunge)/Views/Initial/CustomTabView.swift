@@ -16,12 +16,13 @@ struct CustomTabView: View {
     init() {
         UITabBar.appearance().isHidden = true
     }
+    @ObservedObject var sharedVM = SharedViewModel()
     
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $activeTab) {
 
-                SearchView()
+                SearchView(sharedVM: sharedVM)
                     .tag(Tab.search)
                 
                 ProjectsView()
