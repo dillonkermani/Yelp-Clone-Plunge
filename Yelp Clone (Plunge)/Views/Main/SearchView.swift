@@ -54,13 +54,13 @@ struct SearchView: View {
                         
                         Spacer()
                         
-                    }.padding(.top, 55)
+                    }.padding(.top, 65)
                     
                     VStack {
                         SearchBar(text: searchText)
                             .offset(y: -30)
                     }
-                    .padding(.top, 45 + SCREEN_HEIGHT/3.5)
+                    .padding(.top, 55 + SCREEN_HEIGHT/3.5)
                     
                 }
             }
