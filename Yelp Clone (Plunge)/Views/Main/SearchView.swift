@@ -100,24 +100,5 @@ struct SearchView: View {
         }.statusBarHidden()
     }
     
-    func ImageCard(url: String) -> some View {
-        ZStack {
-            AsyncImage(url: URL(string: url)) { phase in
-                switch phase {
-                case .success(let image):
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                case .failure(_):
-                    Color.red // Placeholder color for error case
-                case .empty:
-                    ProgressView()
-                @unknown default:
-                    fatalError()
-                }
-            }
-            .frame(width: 150, height: 250) // Adjust the size as needed
-            .cornerRadius(15)
-        }
-    }
+    
 }

@@ -32,6 +32,7 @@
 		659132A32A85652600F6CA5E /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A22A85652600F6CA5E /* UnsplashAPI.swift */; };
 		659132A52A85658A00F6CA5E /* SharedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A42A85658A00F6CA5E /* SharedViewModel.swift */; };
 		659132A72A856A1900F6CA5E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A62A856A1900F6CA5E /* Result.swift */; };
+		659132A92A857E1F00F6CA5E /* ImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A82A857E1F00F6CA5E /* ImageCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		659132A22A85652600F6CA5E /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
 		659132A42A85658A00F6CA5E /* SharedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewModel.swift; sourceTree = "<group>"; };
 		659132A62A856A1900F6CA5E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		659132A82A857E1F00F6CA5E /* ImageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				65299EC02A84A3EC0022FE37 /* SliderView.swift */,
 				65299EC22A84A55F0022FE37 /* ImageCarouselView.swift */,
 				65299EC62A84ACEF0022FE37 /* SearchBar.swift */,
+				659132A82A857E1F00F6CA5E /* ImageCard.swift */,
 			);
 			path = Accessory;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				65299EB92A848C470022FE37 /* Tab.swift in Sources */,
 				659132A32A85652600F6CA5E /* UnsplashAPI.swift in Sources */,
 				65299EAB2A848B680022FE37 /* SearchView.swift in Sources */,
+				659132A92A857E1F00F6CA5E /* ImageCard.swift in Sources */,
 				65299E7A2A8484E80022FE37 /* ContentView.swift in Sources */,
 				659132A52A85658A00F6CA5E /* SharedViewModel.swift in Sources */,
 				65299EA42A8489B60022FE37 /* CustomTabView.swift in Sources */,
