@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        
-        @Environment(\.presentationMode) var presentationMode
-
-        
         VStack {
-            Spacer()
             HStack {
-                Text("Login")
+                Button {
+                    presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Text("Cancel")
+                }.padding()
                 Spacer()
+
             }
             Spacer()
-        }.background(.white)
-
+        }
     }
 }
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
