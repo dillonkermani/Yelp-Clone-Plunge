@@ -14,6 +14,8 @@ class UserViewModel: ObservableObject {
     @Published var user: User = User( uid: "", firstName: "", lastName: "", email: "")
     @Published var initialized: Bool = false
     @Published var isLoading = false
+    @Published var isLoadingLogin = false
+    @Published var isLoggedIn = false
     
     // Locally Updatable User Fields (Distinct from 'user' ^)
     @Published var uid: String = "" //maybe we want this so that we dont have to use
@@ -21,6 +23,36 @@ class UserViewModel: ObservableObject {
     @Published var lastName: String = ""
     @Published var email: String = ""
     
+    var handle: AuthStateDidChangeListenerHandle?
+    
+    func listenAuthenticationState() {
+        self.isLoadingLogin = true
+        handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if let user = user {
+                print(user.email ?? "")
+                let firestoreUserId = Ref.FIRESTORE_DOCUMENT_USERID(uid: user.uid)
+                  firestoreUserId.getDocument { (document, error) in
+                      /*
+                      let fcmToken = String(describing:Messaging.messaging().fcmToken ?? "")
+                        firestoreUserId.updateData([
+                            "token": fcmToken
+                        ])
+                       */
+                      if let dict = document?.data() {
+                          guard let decoderUser = try? User.init(from: dict as! Decoder) else {return}
+                        self.user = decoderUser
+                      }
+                  }
+                self.isLoadingLogin = false
+                self.isLoggedIn = true
+            } else {
+                print("isLoggedIn is false")
+                self.isLoadingLogin = false
+                self.isLoggedIn = false
+            }
+        })
+    }
+
     
     func refreshUser() {
         self.isLoading = true

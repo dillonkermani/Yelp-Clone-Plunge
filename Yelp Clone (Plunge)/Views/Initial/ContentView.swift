@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var userVM: UserViewModel
+    
     var body: some View {
-        CustomTabView()
-            .preferredColorScheme(.light)
+        ZStack {
+            CustomTabView()
+                .preferredColorScheme(.light)
+                
+        }.onAppear{userVM.listenAuthenticationState()}
+        
     }
 }
 

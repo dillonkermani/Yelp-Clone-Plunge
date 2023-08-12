@@ -36,6 +36,8 @@
 		65720B432A87327200C1F172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65720B422A87327200C1F172 /* AppDelegate.swift */; };
 		65720B472A8734B700C1F172 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65720B462A8734B700C1F172 /* UserViewModel.swift */; };
 		65720B492A8734E500C1F172 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65720B482A8734E500C1F172 /* User.swift */; };
+		65720B4B2A8748E800C1F172 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65720B4A2A8748E800C1F172 /* LoginView.swift */; };
+		65720B4D2A8751B000C1F172 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65720B4C2A8751B000C1F172 /* LoadingView.swift */; };
 		659132A32A85652600F6CA5E /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A22A85652600F6CA5E /* UnsplashAPI.swift */; };
 		659132A52A85658A00F6CA5E /* SharedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A42A85658A00F6CA5E /* SharedViewModel.swift */; };
 		659132A72A856A1900F6CA5E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A62A856A1900F6CA5E /* Result.swift */; };
@@ -90,6 +92,8 @@
 		65720B422A87327200C1F172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65720B462A8734B700C1F172 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		65720B482A8734E500C1F172 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		65720B4A2A8748E800C1F172 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		65720B4C2A8751B000C1F172 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		659132A22A85652600F6CA5E /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
 		659132A42A85658A00F6CA5E /* SharedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewModel.swift; sourceTree = "<group>"; };
 		659132A62A856A1900F6CA5E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -238,6 +242,7 @@
 				65299EC22A84A55F0022FE37 /* ImageCarouselView.swift */,
 				65299EC62A84ACEF0022FE37 /* SearchBar.swift */,
 				659132A82A857E1F00F6CA5E /* ImageCard.swift */,
+				65720B4C2A8751B000C1F172 /* LoadingView.swift */,
 			);
 			path = Accessory;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				65299E792A8484E80022FE37 /* ContentView.swift */,
 				65299EA32A8489B60022FE37 /* CustomTabView.swift */,
 				65720B422A87327200C1F172 /* AppDelegate.swift */,
+				65720B4A2A8748E800C1F172 /* LoginView.swift */,
 			);
 			path = Initial;
 			sourceTree = "<group>";
@@ -410,8 +416,10 @@
 				65299EB52A848BB70022FE37 /* TabShape.swift in Sources */,
 				65299EC52A84A91A0022FE37 /* Constants.swift in Sources */,
 				65720B472A8734B700C1F172 /* UserViewModel.swift in Sources */,
+				65720B4D2A8751B000C1F172 /* LoadingView.swift in Sources */,
 				65299EB72A848BC00022FE37 /* TabPosition.swift in Sources */,
 				65299EB92A848C470022FE37 /* Tab.swift in Sources */,
+				65720B4B2A8748E800C1F172 /* LoginView.swift in Sources */,
 				659132A32A85652600F6CA5E /* UnsplashAPI.swift in Sources */,
 				65299EAB2A848B680022FE37 /* SearchView.swift in Sources */,
 				659132A92A857E1F00F6CA5E /* ImageCard.swift in Sources */,
