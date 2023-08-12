@@ -29,6 +29,13 @@
 		65299EC32A84A55F0022FE37 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC22A84A55F0022FE37 /* ImageCarouselView.swift */; };
 		65299EC52A84A91A0022FE37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC42A84A91A0022FE37 /* Constants.swift */; };
 		65299EC72A84ACEF0022FE37 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC62A84ACEF0022FE37 /* SearchBar.swift */; };
+		65720B3A2A8730BF00C1F172 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65720B392A8730BF00C1F172 /* GoogleService-Info.plist */; };
+		65720B3D2A87312E00C1F172 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 65720B3C2A87312E00C1F172 /* FirebaseAnalytics */; };
+		65720B3F2A87312E00C1F172 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 65720B3E2A87312E00C1F172 /* FirebaseAuth */; };
+		65720B412A87312E00C1F172 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 65720B402A87312E00C1F172 /* FirebaseFirestore */; };
+		65720B432A87327200C1F172 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65720B422A87327200C1F172 /* AppDelegate.swift */; };
+		65720B472A8734B700C1F172 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65720B462A8734B700C1F172 /* UserViewModel.swift */; };
+		65720B492A8734E500C1F172 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65720B482A8734E500C1F172 /* User.swift */; };
 		659132A32A85652600F6CA5E /* UnsplashAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A22A85652600F6CA5E /* UnsplashAPI.swift */; };
 		659132A52A85658A00F6CA5E /* SharedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A42A85658A00F6CA5E /* SharedViewModel.swift */; };
 		659132A72A856A1900F6CA5E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A62A856A1900F6CA5E /* Result.swift */; };
@@ -79,6 +86,10 @@
 		65299EC22A84A55F0022FE37 /* ImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
 		65299EC42A84A91A0022FE37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		65299EC62A84ACEF0022FE37 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		65720B392A8730BF00C1F172 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65720B422A87327200C1F172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65720B462A8734B700C1F172 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		65720B482A8734E500C1F172 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		659132A22A85652600F6CA5E /* UnsplashAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAPI.swift; sourceTree = "<group>"; };
 		659132A42A85658A00F6CA5E /* SharedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewModel.swift; sourceTree = "<group>"; };
 		659132A62A856A1900F6CA5E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
@@ -90,6 +101,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65720B3D2A87312E00C1F172 /* FirebaseAnalytics in Frameworks */,
+				65720B3F2A87312E00C1F172 /* FirebaseAuth in Frameworks */,
+				65720B412A87312E00C1F172 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +153,7 @@
 				659132A12A85651600F6CA5E /* API */,
 				65299EA52A848AA10022FE37 /* Model */,
 				65299E7B2A8484EA0022FE37 /* Assets.xcassets */,
+				65720B392A8730BF00C1F172 /* GoogleService-Info.plist */,
 				65299E7D2A8484EA0022FE37 /* Yelp_Clone__Plunge_.entitlements */,
 				65299E7E2A8484EA0022FE37 /* Preview Content */,
 			);
@@ -189,6 +204,7 @@
 				65299EBE2A8496940022FE37 /* UIState.swift */,
 				65299EC42A84A91A0022FE37 /* Constants.swift */,
 				659132A62A856A1900F6CA5E /* Result.swift */,
+				65720B482A8734E500C1F172 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -197,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				659132A42A85658A00F6CA5E /* SharedViewModel.swift */,
+				65720B462A8734B700C1F172 /* UserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -230,6 +247,7 @@
 			children = (
 				65299E792A8484E80022FE37 /* ContentView.swift */,
 				65299EA32A8489B60022FE37 /* CustomTabView.swift */,
+				65720B422A87327200C1F172 /* AppDelegate.swift */,
 			);
 			path = Initial;
 			sourceTree = "<group>";
@@ -258,6 +276,11 @@
 			dependencies = (
 			);
 			name = "Yelp Clone (Plunge)";
+			packageProductDependencies = (
+				65720B3C2A87312E00C1F172 /* FirebaseAnalytics */,
+				65720B3E2A87312E00C1F172 /* FirebaseAuth */,
+				65720B402A87312E00C1F172 /* FirebaseFirestore */,
+			);
 			productName = "Yelp Clone (Plunge)";
 			productReference = 65299E742A8484E80022FE37 /* Yelp Clone (Plunge).app */;
 			productType = "com.apple.product-type.application";
@@ -330,6 +353,9 @@
 				Base,
 			);
 			mainGroup = 65299E6B2A8484E80022FE37;
+			packageReferences = (
+				65720B3B2A87312E00C1F172 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 65299E752A8484E80022FE37 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -348,6 +374,7 @@
 			files = (
 				65299E802A8484EA0022FE37 /* Preview Assets.xcassets in Resources */,
 				65299E7C2A8484EA0022FE37 /* Assets.xcassets in Resources */,
+				65720B3A2A8730BF00C1F172 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65720B432A87327200C1F172 /* AppDelegate.swift in Sources */,
 				65299EAF2A848B8C0022FE37 /* MeView.swift in Sources */,
 				65299EB12A848B9C0022FE37 /* CollectionsView.swift in Sources */,
 				65299EBB2A848DB60022FE37 /* TabItem.swift in Sources */,
@@ -381,6 +409,7 @@
 				659132A72A856A1900F6CA5E /* Result.swift in Sources */,
 				65299EB52A848BB70022FE37 /* TabShape.swift in Sources */,
 				65299EC52A84A91A0022FE37 /* Constants.swift in Sources */,
+				65720B472A8734B700C1F172 /* UserViewModel.swift in Sources */,
 				65299EB72A848BC00022FE37 /* TabPosition.swift in Sources */,
 				65299EB92A848C470022FE37 /* Tab.swift in Sources */,
 				659132A32A85652600F6CA5E /* UnsplashAPI.swift in Sources */,
@@ -390,6 +419,7 @@
 				659132A52A85658A00F6CA5E /* SharedViewModel.swift in Sources */,
 				65299EA42A8489B60022FE37 /* CustomTabView.swift in Sources */,
 				65299E782A8484E80022FE37 /* Yelp_Clone__Plunge_App.swift in Sources */,
+				65720B492A8734E500C1F172 /* User.swift in Sources */,
 				65299EB32A848BA40022FE37 /* MoreView.swift in Sources */,
 				65299EC72A84ACEF0022FE37 /* SearchBar.swift in Sources */,
 				65299EC12A84A3EC0022FE37 /* SliderView.swift in Sources */,
@@ -566,7 +596,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yelpclone.Yelp-Clone--Plunge-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yelpclone.PlungeTHA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -604,7 +634,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yelpclone.Yelp-Clone--Plunge-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yelpclone.PlungeTHA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -744,6 +774,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		65720B3B2A87312E00C1F172 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		65720B3C2A87312E00C1F172 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65720B3B2A87312E00C1F172 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		65720B3E2A87312E00C1F172 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65720B3B2A87312E00C1F172 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		65720B402A87312E00C1F172 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65720B3B2A87312E00C1F172 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 65299E6C2A8484E80022FE37 /* Project object */;
 }
