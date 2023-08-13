@@ -36,8 +36,8 @@ struct CustomTabView: View {
                 MeView()
                     .tag(Tab.me)
                 
-                CollectionsView()
-                    .tag(Tab.collections)
+                SavedView()
+                    .tag(Tab.saved)
                 
                 MoreView()
                     .tag(Tab.more)
@@ -47,6 +47,7 @@ struct CustomTabView: View {
                     // Prompt user to log in if they try to access a different tab
                     // You can show an alert or navigate to the login page here
                     // For example, you can present a sheet with the login view
+                    activeTab = .search
                     promptLogin = true
                 }
             }

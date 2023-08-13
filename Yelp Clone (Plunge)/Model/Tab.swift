@@ -11,7 +11,7 @@ enum Tab: String, CaseIterable {
     case search = "Search"
     case projects = "Projects"
     case me = "Me"
-    case collections = "Collections"
+    case saved = "Saved"
     case more = "More"
     
     var systemImage: String {
@@ -22,7 +22,7 @@ enum Tab: String, CaseIterable {
             return "square.grid.3x1.folder.badge.plus"
         case .me:
             return "person.circle"
-        case .collections:
+        case .saved:
             return "bookmark"
         case .more:
             return "line.3.horizontal"
