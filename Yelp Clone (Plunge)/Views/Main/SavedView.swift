@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct SavedView: View {
+    
+    @EnvironmentObject var userVM: UserViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ImagesList()
+        }.onAppear {
+            userVM.loadUser(uid: userVM.user.uid)
+        }
+    }
+    
+    func ImagesList() -> some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 15) {
+                ForEach(userVM.user.savedPhotos ?? [], id: \.self, content: { url in
+                    ImageCard(url: url)
+                })
+            }
+            .padding(15)
+        }
     }
 }
 

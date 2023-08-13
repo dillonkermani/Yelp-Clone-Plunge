@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import FirebaseAuth
+import Firebase
 
 class UserViewModel: ObservableObject {
     
@@ -118,6 +119,32 @@ class UserViewModel: ObservableObject {
             }
         }
         
+    }
+    
+    func addBookmark(url: String) {
+        let user_ref = Ref.FIRESTORE_DOCUMENT_USERID(uid: self.user.uid)
+        user_ref.updateData([
+            "savedPhotos": FieldValue.arrayUnion([url])
+        ]) { error in
+            if let error = error {
+                print("Error updating document: \(error)")
+            } else {
+                print("Bookmark added successfully")
+            }
+        }
+    }
+    
+    func removeBookmark(url: String) {
+        let user_ref = Ref.FIRESTORE_DOCUMENT_USERID(uid: self.user.uid)
+        user_ref.updateData([
+            "savedPhotos": FieldValue.arrayRemove([url])
+        ]) { error in
+            if let error = error {
+                print("Error updating document: \(error)")
+            } else {
+                print("Bookmark removed successfully")
+            }
+        }
     }
     
     func logout() {
