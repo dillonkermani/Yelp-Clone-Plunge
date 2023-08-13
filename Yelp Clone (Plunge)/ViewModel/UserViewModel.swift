@@ -132,8 +132,8 @@ class UserViewModel: ObservableObject {
                 print("Bookmark added successfully")
             }
         }
-        // Log Event in Firebase Analytics (event title: last 7 characters of url
-        Analytics.logEvent("\(id)_bookmarked", parameters: nil)
+        // Log Event in Firebase Analytics
+        Analytics.logEvent("\(id)_bookmarked", parameters: ["url": url])
     }
     
     func removeBookmark(url: String) {
