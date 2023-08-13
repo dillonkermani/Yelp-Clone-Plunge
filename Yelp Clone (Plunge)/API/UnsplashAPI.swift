@@ -25,7 +25,6 @@ class UnsplashAPI {
             guard let data = data else {return}
             do {
                 let res = try JSONDecoder().decode(Results.self, from: data)
-                print(res)
                 onSuccess(res.results)
             } catch {
                 print(error)

@@ -10,38 +10,50 @@ import SwiftUI
 struct CustomTabView: View {
 
     @State private var activeTab: Tab = .search
+    @State private var promptLogin = false
     /// For Smooth Shape Sliding Effect, Using Matched Geometry Effect
     @Namespace private var animation
     @State private var tabShapePosition: CGPoint = .zero
     init() {
         UITabBar.appearance().isHidden = true
     }
+    @EnvironmentObject var userVM: UserViewModel
     @ObservedObject var sharedVM = SharedViewModel()
     
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $activeTab) {
-
                 SearchView(sharedVM: sharedVM)
                     .tag(Tab.search)
+                    .tabItem { Text("Search") }
+                    .onTapGesture {
+                        activeTab = .search
+                    }
                 
-                ProjectsView()
-                    .tag(Tab.projects)
+                SavedView()
+                    .tag(Tab.saved)
                 
-                MeView()
+                UserProfileView()
                     .tag(Tab.me)
-                
-                CollectionsView()
-                    .tag(Tab.collections)
-                
-                MoreView()
-                    .tag(Tab.more)
-                
+            }
+            .onChange(of: activeTab) { newValue in
+                if !userVM.isLoggedIn && newValue != .search {
+                    // Prompt user to log in if they try to access a different tab
+                    // You can show an alert or navigate to the login page here
+                    // For example, you can present a sheet with the login view
+                    activeTab = .search
+                    promptLogin = true
+                }
+            }
+            .sheet(isPresented: $promptLogin) {
+                // Present the login view here
+                LoginView()
             }
             
             CustomTabBar()
         }
     }
+
     
     @ViewBuilder
     func CustomTabBar(_ tint: Color = Color("PlungeBlack"), _ inactiveTint: Color = .gray) -> some View {

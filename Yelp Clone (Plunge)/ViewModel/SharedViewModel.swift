@@ -19,7 +19,6 @@ class SharedViewModel: ObservableObject {
         UnsplashAPI().search(searchText: self.searchText) { results in
                 DispatchQueue.main.async {
                     self.results = results
-                    print(results)
                     self.isLoading = false
                 }
             }

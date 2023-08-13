@@ -43,10 +43,3 @@ struct NeumorphicStyleTextField: View {
 
         }
 }
-
-extension Color {
-    static let lightShadow = Color.white
-    static let darkShadow = Color.gray.opacity(0.6)
-    static let background = Color.white
-    static let neumorphictextColor = Color.gray.opacity(0.6)
-}
