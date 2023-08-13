@@ -39,7 +39,7 @@ class UserViewModel: ObservableObject {
                         ])
                        */
                       if let dict = document?.data() {
-                          guard let decoderUser = try? User.init(from: dict as! Decoder) else {return}
+                          guard let decoderUser = try? User.init(fromDictionary: dict) else {return}
                         self.user = decoderUser
                       }
                   }
@@ -98,7 +98,7 @@ class UserViewModel: ObservableObject {
         let firestoreUserId = Ref.FIRESTORE_DOCUMENT_USERID(uid: uid)
         firestoreUserId.getDocument { (document, error) in
             if let dict = document?.data() {
-                guard let decoderUser = try? User.init(from: dict as! Decoder) else { return }
+                guard let decoderUser = try? User.init(fromDictionary: dict) else {return}
                 self.user = decoderUser
                 self.isLoading = false
             }
@@ -111,13 +111,21 @@ class UserViewModel: ObservableObject {
         let firestoreUserId = Ref.FIRESTORE_DOCUMENT_USERID(uid: uid)
         firestoreUserId.getDocument { (document, error) in
             if let dict = document?.data() {
-                guard let decoderUser = try? User.init(from: dict as! Decoder) else { return }
+                guard let decoderUser = try? User.init(fromDictionary: dict) else {return}
                 self.user = decoderUser
                 onSuccess(decoderUser)
                 self.isLoading = false
             }
         }
         
+    }
+    
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+        } catch  {
+        
+        }
     }
     
 }

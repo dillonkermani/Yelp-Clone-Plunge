@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct MeView: View {
+    
+    @EnvironmentObject var userVM: UserViewModel
+    
     var body: some View {
-        Text("My Profile")
+        VStack {
+            if userVM.isLoggedIn {
+                Text("Welcome \(userVM.user.firstName)")
+                Button {
+                    userVM.logout()
+                } label: {
+                    Text("Logout")
+                }
+            }
+
+        }
     }
 }
 

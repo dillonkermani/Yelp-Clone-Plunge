@@ -47,7 +47,7 @@ struct LoginView: View {
                             CustomTextField(text: $loginVM.password, hint: "Password", leadingIcon: Image(systemName: "lock"), isPassword: true)
                         }
                     }
-                    .frame(height: 200)
+                    .frame(height: 175)
                     
                     if !self.showSignIn {
                         SignUpButton()
@@ -61,15 +61,16 @@ struct LoginView: View {
                         if showSignIn {
                             Text("Create a new account.")
                                 .foregroundColor(.black)
+                        } else {
+                            Text("Already have an account?")
+                                .foregroundColor(.black)
                         }
-                        Text("Already have an account?")
-                            .foregroundColor(.black)
                     }
 
                     Text(errorMessage)
                         .foregroundColor(.red)
                         .lineLimit(2)
-                        .font(.system(size: 10))
+                        .font(.system(size: 12))
                 }
                 .padding(.top, 25)
             }

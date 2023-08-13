@@ -36,7 +36,7 @@ class LoginViewModel: ObservableObject {
                 let firestoreUserId = Ref.FIRESTORE_DOCUMENT_USERID(uid: userId)
                 firestoreUserId.getDocument { (document, error) in
                     if let dict = document?.data() {
-                        guard let decoderUser = try? User.init(from: dict as! Decoder) else {return}
+                        guard let decoderUser = try? User.init(fromDictionary: dict) else {return}
                         self.isLoadingLogin = false
                         onSuccess(decoderUser)
                     }
