@@ -20,9 +20,17 @@ struct LoginView: View {
             IntroView(intro: $activeIntro, size: size) {
                 /// User Login/Signup View
                 VStack(spacing: 10) {
-                    /// Custom TextField
-                    CustomTextField(text: $loginVM.email, hint: "Email Address", leadingIcon: Image(systemName: "envelope"))
-                    CustomTextField(text: $loginVM.password, hint: "Password", leadingIcon: Image(systemName: "lock"), isPassword: true)
+                    ScrollView {
+                        VStack {
+                            HStack {
+                                CustomTextField(text: $loginVM.firstName, hint: "First Name", leadingIcon: Image(systemName: "person"))
+                                CustomTextField(text: $loginVM.lastName, hint: "Last Name", leadingIcon: Image(systemName: "person"))
+                            }
+                            CustomTextField(text: $loginVM.email, hint: "Email Address", leadingIcon: Image(systemName: "envelope"))
+                            CustomTextField(text: $loginVM.password, hint: "Password", leadingIcon: Image(systemName: "lock"), isPassword: true)
+                        }
+                    }
+                    
                     
                     Spacer(minLength: 10)
                     
