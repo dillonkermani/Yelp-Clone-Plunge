@@ -14,23 +14,25 @@ struct SavedView: View {
     let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
 
     var body: some View {
-        VStack {
-            
-            HStack {
-                Text("Saved Photos")
+        if userVM.isLoggedIn {
+            VStack {
+                
+                HStack {
+                    Text("Saved Photos")
+                    Spacer()
+                }
+                .padding(.leading, 25)
+                .font(.custom("Futura-Bold", size: 27))
+                .foregroundColor(Color("PlungeBlack"))
+                
+                
+                ImagesList()
+                    .padding()
+                
                 Spacer()
+            }.onAppear {
+                userVM.loadUser(uid: userVM.user.uid)
             }
-            .padding(.leading, 25)
-            .font(.custom("Futura-Bold", size: 27))
-            .foregroundColor(Color("PlungeBlack"))
-
-            
-            ImagesList()
-                .padding()
-            
-            Spacer()
-        }.onAppear {
-            userVM.loadUser(uid: userVM.user.uid)
         }
     }
     

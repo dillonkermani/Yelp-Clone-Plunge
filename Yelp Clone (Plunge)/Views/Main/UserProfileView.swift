@@ -12,19 +12,21 @@ struct UserProfileView: View {
     @EnvironmentObject var userVM: UserViewModel
     
     var body: some View {
-        NavigationView {
-            GeometryReader {
-                let size = $0.size
-                let safeArea = $0.safeAreaInsets
-                VStack {
-                    SplitView(size: size, safeArea: safeArea, userVM: userVM, info: {
-                        UserInfoView()
-                    })
-                    .ignoresSafeArea(.all, edges: .top)
+        if userVM.isLoggedIn {
+            NavigationView {
+                GeometryReader {
+                    let size = $0.size
+                    let safeArea = $0.safeAreaInsets
+                    VStack {
+                        SplitView(size: size, safeArea: safeArea, userVM: userVM, info: {
+                            UserInfoView()
+                        })
+                        .ignoresSafeArea(.all, edges: .top)
+                    }
                 }
+            }.onAppear {
+                userVM.refreshUser()
             }
-        }.onAppear {
-            userVM.refreshUser()
         }
     }
     
