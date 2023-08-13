@@ -11,6 +11,8 @@ struct SavedView: View {
     
     @EnvironmentObject var userVM: UserViewModel
     
+    let gridItems = [GridItem(.flexible()), GridItem(.flexible())]
+
     var body: some View {
         VStack {
             
@@ -24,6 +26,7 @@ struct SavedView: View {
 
             
             ImagesList()
+                .padding()
             
             Spacer()
         }.onAppear {
@@ -32,15 +35,16 @@ struct SavedView: View {
     }
     
     func ImagesList() -> some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 15) {
-                ForEach(userVM.user.savedPhotos ?? [], id: \.self, content: { url in
+        ScrollView(.vertical, showsIndicators: false) {
+            LazyVGrid(columns: gridItems, alignment: .leading, spacing: 15) {
+                ForEach(userVM.user.savedPhotos ?? [], id: \.self) { url in
                     ImageCard(url: url)
-                })
+                }
             }
             .padding(15)
         }
     }
+
 }
 
 struct SavedView_Previews: PreviewProvider {
