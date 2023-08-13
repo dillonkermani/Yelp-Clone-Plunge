@@ -57,7 +57,7 @@ class UserViewModel: ObservableObject {
     
     func refreshUser() {
         self.isLoading = true
-        getUser(uid: self.uid) { user in
+        getUser(uid: self.user.uid) { user in
             self.setLocalVariablesWith(user: user)
             self.isLoading = false
         } onError: {

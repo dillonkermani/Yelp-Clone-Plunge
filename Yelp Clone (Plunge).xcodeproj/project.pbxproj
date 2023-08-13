@@ -46,6 +46,8 @@
 		659132A52A85658A00F6CA5E /* SharedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A42A85658A00F6CA5E /* SharedViewModel.swift */; };
 		659132A72A856A1900F6CA5E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A62A856A1900F6CA5E /* Result.swift */; };
 		659132A92A857E1F00F6CA5E /* ImageCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659132A82A857E1F00F6CA5E /* ImageCard.swift */; };
+		65B697D52A896AE2006D09A3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B697D42A896AE2006D09A3 /* Extensions.swift */; };
+		65B697D72A896B27006D09A3 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B697D62A896B27006D09A3 /* RoundedCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,8 @@
 		659132A42A85658A00F6CA5E /* SharedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedViewModel.swift; sourceTree = "<group>"; };
 		659132A62A856A1900F6CA5E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		659132A82A857E1F00F6CA5E /* ImageCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCard.swift; sourceTree = "<group>"; };
+		65B697D42A896AE2006D09A3 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		65B697D62A896B27006D09A3 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +259,8 @@
 				65720B4C2A8751B000C1F172 /* LoadingView.swift */,
 				65506A482A8854FF00077BCF /* CustomTextField.swift */,
 				65506A4A2A88552700077BCF /* CustomIndicatorView.swift */,
+				65B697D42A896AE2006D09A3 /* Extensions.swift */,
+				65B697D62A896B27006D09A3 /* RoundedCorner.swift */,
 			);
 			path = Accessory;
 			sourceTree = "<group>";
@@ -425,6 +431,7 @@
 				65299EAD2A848B850022FE37 /* ProjectsView.swift in Sources */,
 				65299EBF2A8496940022FE37 /* UIState.swift in Sources */,
 				659132A72A856A1900F6CA5E /* Result.swift in Sources */,
+				65B697D72A896B27006D09A3 /* RoundedCorner.swift in Sources */,
 				65506A432A88505600077BCF /* LoginViewModel.swift in Sources */,
 				65299EB52A848BB70022FE37 /* TabShape.swift in Sources */,
 				65299EC52A84A91A0022FE37 /* Constants.swift in Sources */,
@@ -436,6 +443,7 @@
 				65506A4B2A88552700077BCF /* CustomIndicatorView.swift in Sources */,
 				65720B4B2A8748E800C1F172 /* LoginView.swift in Sources */,
 				659132A32A85652600F6CA5E /* UnsplashAPI.swift in Sources */,
+				65B697D52A896AE2006D09A3 /* Extensions.swift in Sources */,
 				65299EAB2A848B680022FE37 /* SearchView.swift in Sources */,
 				659132A92A857E1F00F6CA5E /* ImageCard.swift in Sources */,
 				65299E7A2A8484E80022FE37 /* ContentView.swift in Sources */,

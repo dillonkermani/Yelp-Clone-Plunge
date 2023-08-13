@@ -20,13 +20,17 @@ struct SavedView: View {
     }
     
     func ImagesList() -> some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 15) {
-                ForEach(userVM.user.savedPhotos ?? [], id: \.self, content: { url in
-                    ImageCard(url: url)
-                })
+        VStack {
+            Spacer()
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 15) {
+                    ForEach(userVM.user.savedPhotos ?? [], id: \.self, content: { url in
+                        ImageCard(url: url)
+                    })
+                }
+                .padding(15)
             }
-            .padding(15)
+            Spacer()
         }
     }
 }

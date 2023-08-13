@@ -41,67 +41,85 @@ struct ImageCard: View {
 
             // Transparent Overlay
             if isOverlayVisible {
-                
-                VStack {
-                    Color.gray.opacity(0.6)
-                        .edgesIgnoringSafeArea(.all)
-                        .frame(width: 150, height: 120)
-                        .cornerRadius(15)
-                        .onTapGesture {
-                            isOverlayVisible.toggle()
-                        }
-                    Color.blue.opacity(0.6)
-                        .edgesIgnoringSafeArea(.all)
-                        .frame(width: 150, height: 120)
-                        .cornerRadius(15)
-                        .onTapGesture {
-                            isOverlayVisible.toggle()
-                        }
-                }
-                    
-                
-                // Share Button
-                VStack(spacing: 15) {
-                    Button(action: {
-                        shareURL()
-                    }) {
-                        Image(systemName: "square.and.arrow.up")
-                            .font(.system(size: 30))
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.black.opacity(0.5))
-                            .clipShape(Circle())
+                Group {
+                    VStack(spacing: 0) {
+                        Color.gray.opacity(0.6)
+                            .edgesIgnoringSafeArea(.all)
+                            .frame(width: 150, height: 125)
+                            .cornerRadius(15, corners: [.topLeft, .topRight])
+                            .onTapGesture {
+                                isOverlayVisible.toggle()
+                            }
+                        
+                        Color.blue.opacity(0.6)
+                            .edgesIgnoringSafeArea(.all)
+                            .frame(width: 150, height: 125)
+                            .cornerRadius(15, corners: [.bottomLeft, .bottomRight])
+                            .onTapGesture {
+                                isOverlayVisible.toggle()
+                            }
                     }
                     
-                    Button(action: {
-                        if !userVM.isLoggedIn {
-                            self.promptLogin.toggle()
-                        } else {
-                            if self.imageBookmarked {
-                                removeBookmark()
+                    
+                    
+                    // Share Button
+                    VStack(spacing: 15) {
+                        Button(action: {
+                            shareURL()
+                        }) {
+                            Image(systemName: "square.and.arrow.up")
+                                .font(.system(size: 30))
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.black.opacity(0.5))
+                                .clipShape(Circle())
+                        }
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            if !userVM.isLoggedIn {
+                                self.promptLogin.toggle()
                             } else {
-                                bookmarkImage()
+                                if userVM.user.savedPhotos == nil {
+                                    bookmarkImage()
+                                }
+                                else if (userVM.user.savedPhotos!.contains(url)) {
+                                    removeBookmark()
+                                } else {
+                                    bookmarkImage()
+                                }
+                            }
+                        }) {
+                            if userVM.user.savedPhotos == nil {
+                                Image(systemName: "bookmark")
+                                    .font(.system(size: 30))
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(Color.black.opacity(0.5))
+                                    .clipShape(Circle())
+                            } else if (userVM.user.savedPhotos!.contains(url)) {
+                                Image(systemName: "bookmark.fill")
+                                    .font(.system(size: 30))
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(Color.black.opacity(0.5))
+                                    .clipShape(Circle())
+                            } else {
+                                Image(systemName: "bookmark")
+                                    .font(.system(size: 30))
+                                    .foregroundColor(.white)
+                                    .padding()
+                                    .background(Color.black.opacity(0.5))
+                                    .clipShape(Circle())
                             }
                         }
-                    }) {
-                        if self.imageBookmarked {
-                            Image(systemName: "bookmark.fill")
-                                .font(.system(size: 30))
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(Color.black.opacity(0.5))
-                                .clipShape(Circle())
-                        } else {
-                            Image(systemName: "bookmark")
-                                .font(.system(size: 30))
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(Color.black.opacity(0.5))
-                                .clipShape(Circle())
-                        }
+                        
                     }
+                    .padding(.vertical, 30)
                     
-                }
+                    
+                }.frame(width: 150, height: 250)
             }
         }
         .sheet(isPresented: $promptLogin) {
@@ -129,6 +147,7 @@ struct ImageCard: View {
             self.imageBookmarked = true
         }
         userVM.addBookmark(url: url)
+        userVM.refreshUser()
         
     }
     
@@ -137,5 +156,6 @@ struct ImageCard: View {
             self.imageBookmarked = false
         }
         userVM.removeBookmark(url: url)
+        userVM.refreshUser()
     }
 }
