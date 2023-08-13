@@ -89,7 +89,7 @@ struct SearchView: View {
                     
                 } else {
                     ForEach(sharedVM.results, id: \.id, content: { result in
-                        ImageCard(url: result.urls.small)
+                        ImageCard(url: result.urls.small, id: result.id)
                     })
                 }
             }.onAppear {

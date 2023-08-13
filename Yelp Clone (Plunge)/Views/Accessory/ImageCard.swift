@@ -11,6 +11,7 @@ struct ImageCard: View {
     @EnvironmentObject var userVM: UserViewModel
     
     var url: String
+    var id: String
     @State private var isOverlayVisible = false
     @State private var imageBookmarked = false
     @State private var promptLogin = false
@@ -148,7 +149,7 @@ struct ImageCard: View {
         withAnimation {
             self.imageBookmarked = true
         }
-        userVM.addBookmark(url: url)
+        userVM.addBookmark(url: url, id: id)
         userVM.refreshUser()
         
     }

@@ -40,7 +40,7 @@ struct SavedView: View {
         ScrollView(.vertical, showsIndicators: false) {
             LazyVGrid(columns: gridItems, alignment: .leading, spacing: 15) {
                 ForEach(userVM.user.savedPhotos ?? [], id: \.self) { url in
-                    ImageCard(url: url)
+                    ImageCard(url: url, id: "") 
                 }
             }
             .padding(15)

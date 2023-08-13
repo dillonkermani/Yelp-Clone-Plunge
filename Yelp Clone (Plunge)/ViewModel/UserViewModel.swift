@@ -121,7 +121,7 @@ class UserViewModel: ObservableObject {
         
     }
     
-    func addBookmark(url: String) {
+    func addBookmark(url: String, id: String) {
         let user_ref = Ref.FIRESTORE_DOCUMENT_USERID(uid: self.user.uid)
         user_ref.updateData([
             "savedPhotos": FieldValue.arrayUnion([url])
@@ -132,6 +132,8 @@ class UserViewModel: ObservableObject {
                 print("Bookmark added successfully")
             }
         }
+        // Log Event in Firebase Analytics (event title: last 7 characters of url
+        Analytics.logEvent("\(id)_bookmarked", parameters: nil)
     }
     
     func removeBookmark(url: String) {
