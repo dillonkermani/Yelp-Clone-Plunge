@@ -24,7 +24,7 @@ struct LoginView: View {
             
             IntroView(intro: $activeIntro, size: size) {
                 VStack(spacing: 10) {
-                    HStack {
+                    VStack(alignment: .leading) {
                         Text("Change")
                             .font(.system(size: 40))
                             .fontWeight(.black)
@@ -33,7 +33,7 @@ struct LoginView: View {
                             .fontWeight(.black)
                         Spacer()
                     }
-                    .padding(.bottom, 20)
+                    .offset(y: -30)
                     
                     ScrollView {
                         VStack {
@@ -47,7 +47,7 @@ struct LoginView: View {
                             CustomTextField(text: $loginVM.password, hint: "Password", leadingIcon: Image(systemName: "lock"), isPassword: true)
                         }
                     }
-                    .frame(height: 150)
+                    .frame(height: 200)
                     
                     if !self.showSignIn {
                         SignUpButton()
@@ -58,6 +58,10 @@ struct LoginView: View {
                     Button {
                         self.showSignIn.toggle()
                     } label: {
+                        if showSignIn {
+                            Text("Create a new account.")
+                                .foregroundColor(.black)
+                        }
                         Text("Already have an account?")
                             .foregroundColor(.black)
                     }
