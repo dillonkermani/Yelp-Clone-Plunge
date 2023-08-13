@@ -18,12 +18,14 @@ class LoginViewModel: ObservableObject {
     @Published var password: String = ""
     @Published var confirmPassword: String = ""
     
+    @Published var isLoadingLogin: Bool = false
     
     var errorString = ""
     var authResultString = ""
     
     
     func signin(onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
+        self.isLoadingLogin = true
         Auth.auth().signIn(withEmail: email, password: password) { (authData, error) in
                 if error != nil {
                     onError(error!.localizedDescription)
@@ -35,6 +37,7 @@ class LoginViewModel: ObservableObject {
                 firestoreUserId.getDocument { (document, error) in
                     if let dict = document?.data() {
                         guard let decoderUser = try? User.init(from: dict as! Decoder) else {return}
+                        self.isLoadingLogin = false
                         onSuccess(decoderUser)
                     }
                 }
@@ -44,7 +47,7 @@ class LoginViewModel: ObservableObject {
     
     
     func signup(onSuccess: @escaping(_ user: User) -> Void, onError: @escaping(_ errorMessage: String) -> Void) {
-        
+        self.isLoadingLogin = true
         Auth.auth().createUser(withEmail: email, password: self.password) { (authData, error) in
                     if error != nil {
                         onError(error!.localizedDescription)
@@ -69,6 +72,7 @@ class LoginViewModel: ObservableObject {
                             onError(error!.localizedDescription)
                             return
                         }
+                        self.isLoadingLogin = false
                         onSuccess(user)
                     }
  

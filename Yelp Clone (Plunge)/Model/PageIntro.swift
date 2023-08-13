@@ -17,6 +17,6 @@ struct PageIntro: Identifiable, Hashable {
 
 var pageIntros: [PageIntro] = [
     .init(introAssetImage: "p2", title: "The Ultimate\n Wellness Ritual.", subTitle: "Find your community and get inspired."),
-    .init(introAssetImage: "p1", title: "Take\nThe Plunge", subTitle: "Boost overall health, mental fitness, and recovery."),
-    .init(introAssetImage: "p4", title: "Change\nYour Life", subTitle: "Enter your details to register for an account.", displaysAction: true),
+    .init(introAssetImage: "p1", title: "Take\nThe Plunge.", subTitle: "Boost overall health, mental fitness, and recovery."),
+    .init(introAssetImage: "p4", title: "Change\nYour Life", subTitle: "", displaysAction: true),
 ]

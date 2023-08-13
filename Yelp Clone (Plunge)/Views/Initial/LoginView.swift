@@ -8,45 +8,64 @@
 import SwiftUI
 
 struct LoginView: View {
+    @Environment(\.presentationMode) var presentationMode
+
+    @EnvironmentObject var userVM: UserViewModel
     @ObservedObject var loginVM = LoginViewModel()
     @State private var activeIntro: PageIntro = pageIntros[0]
     @State private var emailID: String = ""
     @State private var password: String = ""
     @State private var keyboardHeight: CGFloat = 0
+    @State private var showSignIn: Bool = false
+    @State private var errorMessage: String = ""
     var body: some View {
         GeometryReader {
             let size = $0.size
             
             IntroView(intro: $activeIntro, size: size) {
-                /// User Login/Signup View
                 VStack(spacing: 10) {
+                    HStack {
+                        Text("Change")
+                            .font(.system(size: 40))
+                            .fontWeight(.black)
+                        Text("Your Life.")
+                            .font(.system(size: 40))
+                            .fontWeight(.black)
+                        Spacer()
+                    }
+                    .padding(.bottom, 20)
+                    
                     ScrollView {
                         VStack {
-                            HStack {
-                                CustomTextField(text: $loginVM.firstName, hint: "First Name", leadingIcon: Image(systemName: "person"))
-                                CustomTextField(text: $loginVM.lastName, hint: "Last Name", leadingIcon: Image(systemName: "person"))
+                            if !self.showSignIn {
+                                HStack {
+                                    CustomTextField(text: $loginVM.firstName, hint: "First Name", leadingIcon: Image(systemName: "person"))
+                                    CustomTextField(text: $loginVM.lastName, hint: "Last Name", leadingIcon: Image(systemName: "person"))
+                                }
                             }
                             CustomTextField(text: $loginVM.email, hint: "Email Address", leadingIcon: Image(systemName: "envelope"))
                             CustomTextField(text: $loginVM.password, hint: "Password", leadingIcon: Image(systemName: "lock"), isPassword: true)
                         }
                     }
+                    .frame(height: 150)
                     
-                    
-                    Spacer(minLength: 10)
+                    if !self.showSignIn {
+                        SignUpButton()
+                    } else {
+                        SignInButton()
+                    }
                     
                     Button {
-                        
+                        self.showSignIn.toggle()
                     } label: {
-                        Text("Continue")
-                            .fontWeight(.semibold)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 15)
-                            .frame(maxWidth: .infinity)
-                            .background {
-                                Capsule()
-                                    .fill(.black)
-                            }
+                        Text("Already have an account?")
+                            .foregroundColor(.black)
                     }
+
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .lineLimit(2)
+                        .font(.system(size: 10))
                 }
                 .padding(.top, 25)
             }
@@ -65,6 +84,70 @@ struct LoginView: View {
             keyboardHeight = 0
         }
         .animation(.spring(response: 0.5, dampingFraction: 0.8, blendDuration: 0), value: keyboardHeight)
+    }
+    
+    func SignInButton() -> some View {
+        VStack {
+            Button {
+                loginVM.signin { user in
+                    print("\(user) signed up successfully")
+                    presentationMode.wrappedValue.dismiss()
+                } onError: { errorMessage in
+                    self.errorMessage = errorMessage
+                    loginVM.isLoadingLogin = false
+                    
+                }
+
+            } label: {
+                HStack {
+                    if loginVM.isLoadingLogin {
+                        ProgressView()
+                    } else {
+                        Text("Sign In")
+                            .fontWeight(.semibold)
+                            
+                    }
+                }.foregroundColor(.white)
+                    .padding(.vertical, 15)
+                    .frame(maxWidth: .infinity)
+                    .background {
+                        Capsule()
+                            .fill(.black)
+                    }
+            }
+        }
+    }
+    
+    func SignUpButton() -> some View {
+        VStack {
+            Button {
+                loginVM.signup { user in
+                    print("\(user) signed up successfully")
+                    presentationMode.wrappedValue.dismiss()
+                } onError: { errorMessage in
+                    self.errorMessage = errorMessage
+                    loginVM.isLoadingLogin = false
+                    
+                }
+
+            } label: {
+                HStack {
+                    if loginVM.isLoadingLogin {
+                        ProgressView()
+                    } else {
+                        Text("Sign Up")
+                            .fontWeight(.semibold)
+                            
+                    }
+                }.foregroundColor(.white)
+                    .padding(.vertical, 15)
+                    .frame(maxWidth: .infinity)
+                    .background {
+                        Capsule()
+                            .fill(.black)
+                    }
+            }
+        }
     }
 }
 
@@ -92,7 +175,8 @@ struct IntroView<ActionView: View>: View {
                 Image(intro.introAssetImage)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .padding(15)
+                    .padding(.horizontal, 15)
+                    .padding(.top, 15)
                     .frame(width: size.width, height: size.height)
             }
             /// Moving Up
@@ -103,16 +187,17 @@ struct IntroView<ActionView: View>: View {
             VStack(alignment: .leading, spacing: 10) {
                 Spacer(minLength: 0)
                 
-                Text(intro.title)
-                    .font(.system(size: 40))
-                    .fontWeight(.black)
+                if !intro.displaysAction {
+                    Text(intro.title)
+                        .font(.system(size: 40))
+                        .fontWeight(.black)
+                
                 
                 Text(intro.subTitle)
                     .font(.caption)
                     .foregroundColor(.gray)
                     .padding(.top, 15)
-                
-                if !intro.displaysAction {
+
                     Group {
                         Spacer(minLength: 25)
                         
@@ -164,7 +249,7 @@ struct IntroView<ActionView: View>: View {
                         .foregroundColor(.black)
                         .contentShape(Rectangle())
                 }
-                .padding(10)
+                .padding(0)
                 /// Animating Back Button
                 /// Comes From Top When Active
                 .offset(y: showView ? 0 : -200)
