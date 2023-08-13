@@ -29,6 +29,10 @@
 		65299EC32A84A55F0022FE37 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC22A84A55F0022FE37 /* ImageCarouselView.swift */; };
 		65299EC52A84A91A0022FE37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC42A84A91A0022FE37 /* Constants.swift */; };
 		65299EC72A84ACEF0022FE37 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65299EC62A84ACEF0022FE37 /* SearchBar.swift */; };
+		65506A432A88505600077BCF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65506A422A88505600077BCF /* LoginViewModel.swift */; };
+		65506A472A8854BC00077BCF /* PageIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65506A462A8854BC00077BCF /* PageIntro.swift */; };
+		65506A492A8854FF00077BCF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65506A482A8854FF00077BCF /* CustomTextField.swift */; };
+		65506A4B2A88552700077BCF /* CustomIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65506A4A2A88552700077BCF /* CustomIndicatorView.swift */; };
 		65720B3A2A8730BF00C1F172 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65720B392A8730BF00C1F172 /* GoogleService-Info.plist */; };
 		65720B3D2A87312E00C1F172 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 65720B3C2A87312E00C1F172 /* FirebaseAnalytics */; };
 		65720B3F2A87312E00C1F172 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 65720B3E2A87312E00C1F172 /* FirebaseAuth */; };
@@ -88,6 +92,10 @@
 		65299EC22A84A55F0022FE37 /* ImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
 		65299EC42A84A91A0022FE37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		65299EC62A84ACEF0022FE37 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		65506A422A88505600077BCF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		65506A462A8854BC00077BCF /* PageIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageIntro.swift; sourceTree = "<group>"; };
+		65506A482A8854FF00077BCF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		65506A4A2A88552700077BCF /* CustomIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIndicatorView.swift; sourceTree = "<group>"; };
 		65720B392A8730BF00C1F172 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		65720B422A87327200C1F172 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65720B462A8734B700C1F172 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -209,6 +217,7 @@
 				65299EC42A84A91A0022FE37 /* Constants.swift */,
 				659132A62A856A1900F6CA5E /* Result.swift */,
 				65720B482A8734E500C1F172 /* User.swift */,
+				65506A462A8854BC00077BCF /* PageIntro.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +227,7 @@
 			children = (
 				659132A42A85658A00F6CA5E /* SharedViewModel.swift */,
 				65720B462A8734B700C1F172 /* UserViewModel.swift */,
+				65506A422A88505600077BCF /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -243,6 +253,8 @@
 				65299EC62A84ACEF0022FE37 /* SearchBar.swift */,
 				659132A82A857E1F00F6CA5E /* ImageCard.swift */,
 				65720B4C2A8751B000C1F172 /* LoadingView.swift */,
+				65506A482A8854FF00077BCF /* CustomTextField.swift */,
+				65506A4A2A88552700077BCF /* CustomIndicatorView.swift */,
 			);
 			path = Accessory;
 			sourceTree = "<group>";
@@ -410,15 +422,19 @@
 				65299EB12A848B9C0022FE37 /* CollectionsView.swift in Sources */,
 				65299EBB2A848DB60022FE37 /* TabItem.swift in Sources */,
 				65299EC32A84A55F0022FE37 /* ImageCarouselView.swift in Sources */,
+				65506A492A8854FF00077BCF /* CustomTextField.swift in Sources */,
 				65299EAD2A848B850022FE37 /* ProjectsView.swift in Sources */,
 				65299EBF2A8496940022FE37 /* UIState.swift in Sources */,
 				659132A72A856A1900F6CA5E /* Result.swift in Sources */,
+				65506A432A88505600077BCF /* LoginViewModel.swift in Sources */,
 				65299EB52A848BB70022FE37 /* TabShape.swift in Sources */,
 				65299EC52A84A91A0022FE37 /* Constants.swift in Sources */,
 				65720B472A8734B700C1F172 /* UserViewModel.swift in Sources */,
 				65720B4D2A8751B000C1F172 /* LoadingView.swift in Sources */,
+				65506A472A8854BC00077BCF /* PageIntro.swift in Sources */,
 				65299EB72A848BC00022FE37 /* TabPosition.swift in Sources */,
 				65299EB92A848C470022FE37 /* Tab.swift in Sources */,
+				65506A4B2A88552700077BCF /* CustomIndicatorView.swift in Sources */,
 				65720B4B2A8748E800C1F172 /* LoginView.swift in Sources */,
 				659132A32A85652600F6CA5E /* UnsplashAPI.swift in Sources */,
 				65299EAB2A848B680022FE37 /* SearchView.swift in Sources */,
