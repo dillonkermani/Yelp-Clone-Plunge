@@ -43,7 +43,7 @@ struct ImageCard: View {
             if isOverlayVisible {
                 Group {
                     VStack(spacing: 0) {
-                        Color.gray.opacity(0.6)
+                        Color.purple.opacity(0.6)
                             .edgesIgnoringSafeArea(.all)
                             .frame(width: 150, height: 125)
                             .cornerRadius(15, corners: [.topLeft, .topRight])

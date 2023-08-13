@@ -30,17 +30,11 @@ struct CustomTabView: View {
                         activeTab = .search
                     }
                 
-                ProjectsView()
-                    .tag(Tab.projects)
-                
-                MeView()
-                    .tag(Tab.me)
-                
                 SavedView()
                     .tag(Tab.saved)
                 
-                MoreView()
-                    .tag(Tab.more)
+                UserProfileView()
+                    .tag(Tab.me)
             }
             .onChange(of: activeTab) { newValue in
                 if !userVM.isLoggedIn && newValue != .search {

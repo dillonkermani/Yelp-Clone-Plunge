@@ -8,6 +8,34 @@
 import SwiftUI
 
 extension View {
+    func moveText(_ progress: CGFloat, _ headerHeight: CGFloat, _ minimumHeaderHeight: CGFloat) -> some View {
+        self
+            .hidden()
+            .overlay {
+                GeometryReader { proxy in
+                    let rect = proxy.frame(in: .global)
+                    let midY = rect.midY
+                    /// Half Scaled Text Height (Since Text Scaling will be 0.85 (1 - 0.15))
+                    let halfScaledTextHeight = (rect.height * 0.85) / 2
+                    /// Profile Image
+                    let profileImageHeight = (headerHeight * 0.5)
+                    /// Since Image Scaling will be 0.3 (1 - 0.7)
+                    let scaledImageHeight = profileImageHeight * 0.3
+                    let halfScaledImageHeight = scaledImageHeight / 2
+                    /// Applied VStack Spacing is 15
+                    /// 15 / 0.3 = 4.5 (0.3 -> Image Scaling)
+                    let vStackSpacing: CGFloat = 4.5
+                    let resizedOffsetY = (midY - (minimumHeaderHeight - halfScaledTextHeight - vStackSpacing - halfScaledImageHeight))
+                    
+                    self
+                        .scaleEffect(1 - (progress * 0.15))
+                        .offset(y: -resizedOffsetY * progress)
+                }
+            }
+    }
+}
+
+extension View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape( RoundedCorner(radius: radius, corners: corners) )
     }

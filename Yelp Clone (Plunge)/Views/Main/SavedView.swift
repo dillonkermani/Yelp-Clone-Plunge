@@ -13,24 +13,32 @@ struct SavedView: View {
     
     var body: some View {
         VStack {
+            
+            HStack {
+                Text("Saved Photos")
+                Spacer()
+            }
+            .padding(.leading, 25)
+            .font(.custom("Futura-Bold", size: 27))
+            .foregroundColor(Color("PlungeBlack"))
+
+            
             ImagesList()
+            
+            Spacer()
         }.onAppear {
             userVM.loadUser(uid: userVM.user.uid)
         }
     }
     
     func ImagesList() -> some View {
-        VStack {
-            Spacer()
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 15) {
-                    ForEach(userVM.user.savedPhotos ?? [], id: \.self, content: { url in
-                        ImageCard(url: url)
-                    })
-                }
-                .padding(15)
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 15) {
+                ForEach(userVM.user.savedPhotos ?? [], id: \.self, content: { url in
+                    ImageCard(url: url)
+                })
             }
-            Spacer()
+            .padding(15)
         }
     }
 }

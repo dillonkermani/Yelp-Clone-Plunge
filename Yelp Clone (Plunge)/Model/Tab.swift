@@ -9,23 +9,17 @@ import SwiftUI
 
 enum Tab: String, CaseIterable {
     case search = "Search"
-    case projects = "Projects"
-    case me = "Me"
     case saved = "Saved"
-    case more = "More"
+    case me = "Me"
     
     var systemImage: String {
         switch self {
         case .search:
             return "magnifyingglass"
-        case .projects:
-            return "square.grid.3x1.folder.badge.plus"
-        case .me:
-            return "person.circle"
         case .saved:
             return "bookmark"
-        case .more:
-            return "line.3.horizontal"
+        case .me:
+            return "person.circle"
         }
     }
     
