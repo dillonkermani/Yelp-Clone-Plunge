@@ -11,19 +11,17 @@ Plunge THA is a simple and user-friendly app that lets you search for pictures f
 ## How to Use
 
 1. **Search for Pictures:**
-
-  [Screenshot](https://imgur.com/E4ubdJU.jpg)
    
    - Open the Plunge THA app on your device.
    - In the search bar at the top, enter keywords or phrases that describe the type of image you're looking for.
    - Tap the "Return" or "Enter" button to retrieve a list of relevant images.
 
-3. **Share an Image:**
+2. **Share an Image:**
    - Once you've found the image you want to share, tap on it to bring up the image details.
    - Look for the "Share" button (usually represented by an arrow pointing out of a box).
    - Tap the "Share" button and select your preferred sharing method from the list of options (e.g., messaging apps, social media, email).
 
-4. **Enjoy and Repeat:**
+3. **Enjoy and Repeat:**
    - That's it! You've successfully searched for an image and shared it using Plunge THA. Feel free to continue searching for more images and sharing them as needed.
 
 ## Feedback and Contributions
